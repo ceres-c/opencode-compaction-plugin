@@ -1,0 +1,33 @@
+{
+  "name": "opencode-custom-compaction-prompt",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./tui": "./tui.ts",
+    "./rpc": "./rpc.ts"
+  },
+  "files": [
+    "index.ts",
+    "compaction.ts",
+    "tui.ts",
+    "rpc.ts",
+    "compact.md",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --experimental-vm-modules --test index.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:integration": "node --test integration.test.mjs"
+  },
+  "description": "Replace OpenCode's summarizer with Claude's compaction prompt",
+  "dependencies": {
+    "@opencode/plugin": "2.2.5"
+  },
+  "devDependencies": {
+    "@opencode/client": "2.2.5",
+    "@types/node": "^26.6.6",
+    "typescript": "5.9.3"
+  }
+}
